@@ -1,0 +1,40 @@
+﻿@model IEnumerable<GLMS.Web.Models.ServiceRequest>
+@{
+    ViewData["Title"] = "Service Requests";
+}
+
+<h2>Service Requests</h2>
+<a asp-action="Create" class="btn btn-primary mb-3">+ New Service Request</a>
+
+<table class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Contract</th>
+            <th>Client</th>
+            <th>Description</th>
+            <th>Cost (USD)</th>
+            <th>Rate Used</th>
+            <th>Cost (ZAR)</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var req in Model)
+        {
+            <tr>
+                <td>@req.Contract?.ServiceLevel</td>
+                <td>@req.Contract?.Client?.Name</td>
+                <td>@req.Description</td>
+                <td>$@req.CostUSD.ToString("F2")</td>
+                <td>@req.ExchangeRateUsed.ToString("F4")</td>
+                <td>R @req.CostZAR.ToString("F2")</td>
+                <td>@req.Status</td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@req.ServiceRequestId"
+                       class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
