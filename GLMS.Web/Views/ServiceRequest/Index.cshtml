@@ -26,9 +26,9 @@
                 <td>@req.Contract?.ServiceLevel</td>
                 <td>@req.Contract?.Client?.Name</td>
                 <td>@req.Description</td>
-                <td>$@req.CostUSD.ToString("F2")</td>
-                <td>@req.ExchangeRateUsed.ToString("F4")</td>
-                <td>R @req.CostZAR.ToString("F2")</td>
+                <td>$@req.CostUSD.ToString("N2")</td>
+                <td>@req.ExchangeRateUsed.ToString("N2")</td>
+                <td>R @req.CostZAR.ToString("N2")</td>
                 <td>@req.Status</td>
                 <td>
                     <a asp-action="Delete" asp-route-id="@req.ServiceRequestId"
