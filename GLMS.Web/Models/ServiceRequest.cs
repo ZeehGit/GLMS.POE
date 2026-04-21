@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GLMS.Web.Models
 {
-    public enum ServiceRequestStatus //
+    public enum ServiceRequestStatus 
     {
         Pending,
         InProgress,
