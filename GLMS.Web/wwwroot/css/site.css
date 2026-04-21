@@ -1,31 +1,229 @@
-html {
-  font-size: 14px;
+/* ─── GLOBAL ─────────────────────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+html, body {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #1a1a2e;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+/* ─── NAVBAR ─────────────────────────────────────────── */
+.glms-navbar {
+    background-color: #0d2137;
+    padding: 14px 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+    .glms-navbar .navbar-brand {
+        font-size: 1.3rem;
+        color: #e0f0ff !important;
+        letter-spacing: 0.5px;
+    }
+
+    .glms-navbar .nav-link {
+        color: #a8c8e8 !important;
+        font-size: 0.95rem;
+        margin-left: 10px;
+        transition: color 0.2s;
+    }
+
+        .glms-navbar .nav-link:hover {
+            color: #ffffff !important;
+        }
+
+/* ─── HERO SECTION ───────────────────────────────────── */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    background-image: url('/images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-body {
-  margin-bottom: 60px;
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient( to bottom, rgba(5, 20, 40, 0.65), rgba(5, 20, 40, 0.80) );
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 750px;
+    padding: 20px;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.hero-title {
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    margin-bottom: 16px;
 }
+
+.hero-slogan {
+    font-size: 1.5rem;
+    color: #a8d8ff;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.hero-sub {
+    font-size: 1rem;
+    color: #cce0f0;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ─── GLASS MAIN BUTTON ──────────────────────────────── */
+.btn-glass-main {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1.5px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 12px 36px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+    .btn-glass-main:hover {
+        background: rgba(255, 255, 255, 0.22);
+        border-color: rgba(255, 255, 255, 0.6);
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+/* ─── CARDS SECTION ──────────────────────────────────── */
+.cards-section {
+    background-color: #f0f4f8;
+    padding: 70px 20px;
+}
+
+.cards-heading {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0d2137;
+    margin-bottom: 40px;
+}
+
+/* ─── GLASS CARDS ────────────────────────────────────── */
+.glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+    .glass-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+    }
+
+.glass-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.glass-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0d2137;
+    margin-bottom: 10px;
+}
+
+.glass-card p {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+/* ─── GLASS CARD BUTTON ──────────────────────────────── */
+.btn-glass {
+    background: rgba(13, 33, 55, 0.08);
+    color: #0d2137;
+    border: 1.5px solid rgba(13, 33, 55, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+    .btn-glass:hover {
+        background: rgba(13, 33, 55, 0.16);
+        border-color: rgba(13, 33, 55, 0.5);
+        color: #0d2137;
+        transform: translateY(-2px);
+    }
+
+/* ─── FOOTER ─────────────────────────────────────────── */
+.glms-footer {
+    background-color: #0d2137;
+    color: #7a9ab8;
+    padding: 20px 0;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+/* ─── GENERAL PAGE PADDING ───────────────────────────── */
+.container-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ─── TABLES ─────────────────────────────────────────── */
+.table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ─── FORMS ──────────────────────────────────────────── */
+.form-control, .form-select {
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background-color: #0d2137;
+    border-color: #0d2137;
+    border-radius: 8px;
+}
+
+    .btn-primary:hover {
+        background-color: #1a3a5c;
+        border-color: #1a3a5c;
+    }

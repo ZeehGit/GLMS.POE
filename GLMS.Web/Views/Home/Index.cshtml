@@ -1,8 +1,62 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">TechMove Logistics</h1>
+        <p class="hero-slogan">Moving the World, One Contract at a Time.</p>
+        <p class="hero-sub">
+            Enterprise-grade logistics management — streamlined,
+            scalable, and built for global operations.
+        </p>
+        <a asp-controller="Contract" asp-action="Index" class="btn btn-glass-main">
+            Get Started
+        </a>
+    </div>
+</div>
+
+<!-- Quick Access Cards -->
+<div class="cards-section">
+    <div class="container">
+        <h2 class="cards-heading">What would you like to manage?</h2>
+        <div class="row g-4 justify-content-center">
+
+            <!-- Clients Card -->
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <div class="glass-card-icon">👥</div>
+                    <h4>Clients</h4>
+                    <p>View and manage all your global client accounts and contact details.</p>
+                    <a asp-controller="Client" asp-action="Index"
+                       class="btn btn-glass">Manage Clients</a>
+                </div>
+            </div>
+
+            <!-- Contracts Card -->
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <div class="glass-card-icon">📄</div>
+                    <h4>Contracts</h4>
+                    <p>Track contract lifecycles, statuses, and signed agreements in one place.</p>
+                    <a asp-controller="Contract" asp-action="Index"
+                       class="btn btn-glass">Manage Contracts</a>
+                </div>
+            </div>
+
+            <!-- Service Requests Card -->
+            <div class="col-md-4">
+                <div class="glass-card">
+                    <div class="glass-card-icon">🚚</div>
+                    <h4>Service Requests</h4>
+                    <p>Raise and monitor service requests linked to active contracts.</p>
+                    <a asp-controller="ServiceRequest" asp-action="Index"
+                       class="btn btn-glass">Manage Requests</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
