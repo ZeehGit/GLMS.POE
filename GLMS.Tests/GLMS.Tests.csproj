@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GLMS.Web\GLMS.Web.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
 
