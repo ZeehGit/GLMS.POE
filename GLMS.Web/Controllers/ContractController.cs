@@ -176,3 +176,19 @@ namespace GLMS.Web.Controllers
         }
     }
 }
+
+/*
+* Title: Overview of ASP.NET Core MVC
+* Author: Microsoft
+* Date: 17 June 2024
+* Version: 1
+* Availability: https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-10.0
+*/
+
+/*
+* Title: Language Integrated Query (LINQ)
+* Author: Microsoft
+* Date: 03 December 2025
+* Version: 1
+* Availability: https://learn.microsoft.com/en-us/dotnet/csharp/linq/
+*/

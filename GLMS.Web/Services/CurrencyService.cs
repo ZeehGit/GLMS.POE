@@ -40,3 +40,19 @@ namespace GLMS.Web.Services
         }
     }
 }
+
+/*
+* Title: JSON serialization and deserialization in .NET - overview
+* Author: Microsoft
+* Date: 29 January 2025
+* Version: 1
+* Availability: https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/overview
+*/
+
+/*
+* Title: Make HTTP requests with the HttpClient class
+* Author: Microsoft
+* Date: 05 March 2026
+* Version: 1
+* Availability: https://learn.microsoft.com/en-us/dotnet/fundamentals/networking/http/httpclient
+*/

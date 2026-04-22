@@ -52,3 +52,19 @@ namespace GLMS.Tests
         }
     }
 }
+
+/*
+* Title: Testing with 'dotnet test'
+* Author: Microsoft
+* Date: 09 April 2026
+* Version: 1
+* Availability: https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
+*/
+
+/*
+* Title: xUnit.net
+* Author: Getting Started with xUnit.net
+* Date: 13 August 2025
+* Version: 3
+* Availability: https://xunit.net/docs/getting-started/v3/getting-started
+*/
